@@ -1,0 +1,18 @@
+import random
+
+def random_movement(current_x, current_y, max_step_size):
+    # Generate random changes in x and y coordinates
+    delta_x = random.uniform(-max_step_size, max_step_size)
+    delta_y = random.uniform(-max_step_size, max_step_size)
+    
+    # Update current position
+    new_x = current_x + delta_x
+    new_y = current_y + delta_y
+    
+    return new_x, new_y
+
+# Beispiel
+current_position = (0, 0)
+max_step_size = 1.0  # You can adjust this value
+new_position = random_movement(current_position[0], current_position[1], max_step_size)
+print("New Position:", new_position)
